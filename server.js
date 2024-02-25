@@ -35,7 +35,7 @@ const isLoggedIn = (req, res, next) => {
         res.sendStatus(401);
     }
 }
-
+const varihdhd = 100;
 // Initializes passport and passport sessions
 app.use(passport.initialize());
 app.use(passport.session());
