@@ -1,0 +1,39 @@
+{
+  "name": "movie-ticket-booking-api-master",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "formidable": "^1.2.2",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.6",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "engines": {
+    "node": "14.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start nodemon server.js && start  http://localhost:8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

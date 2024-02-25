@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>MovieTicks - About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+var x = "<%=subscribe%>"
+var y = "<%=unsubscribe%>"
+var z = "<%=contact%>" 
+
+     if(x == "yes")
+{
+     $('#btnTrigger').click();
+     $('.thank-you-pop p').text('You have subscribed successfully')
+    }    
+
+
+    if(y == "yes")
+{
+     $('#btnTrigger').click();
+     $('.thank-you-pop p').text('You have Unsubscribed successfully')
+    }  
+
+
+
+    if(z == "yes")
+{
+     $('#btnTrigger').click();
+     $('.thank-you-pop p').text('Your contact details submitted successfully')
+    }  
+
+     })
+   </script>
+</head>
+<body>
+
+
+<div class="header-blue">
+            <%- include('../partials/header'); %>
+
+
+
+<style>
+ .a0 body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+ .a0 .container-fluid {
+    padding: 60px 50px;
+  }
+ .a0 h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+ .a0 h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+   .jumbotron {
+    margin-top: -100px;
+    background-color: transparent!important;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: -120px;
+  }
+  .a0.container-fluid {
+    padding: 60px 50px;
+  }
+ .a0 .bg-grey {
+    background-color: #f6f6f6;
+  }
+ .a0 .logo-small {
+    color: hotpink;
+    font-size: 50px;
+  }
+ .a0 .logo {
+    color: hotpink;
+    font-size: 200px;
+  }
+ .a0 .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+ .a0 .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .a0.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .a0.carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .a0.carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .a0.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .a0 .item span {
+    font-style: normal;
+  }
+  .a0 .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .a0 .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .a0 .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .a0 .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .a0 .panel-footer {
+    background-color: white !important;
+  }
+  .a0 .panel-footer h3 {
+    font-size: 32px;
+  }
+  .a0 .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .a0 .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  
+  .a0 footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .a0 .slideanim {visibility:hidden;}
+  .a0 .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+
+
+    .thank-you-pop{
+    width:100%;
+    padding:20px;
+    text-align:center;
+}
+.thank-you-pop img{
+    width:76px;
+    height:auto;
+    margin:0 auto;
+    display:block;
+    margin-bottom:25px;
+}
+
+.thank-you-pop h1{
+    font-size: 42px;
+    margin-bottom: 25px;
+    color:#5C5C5C;
+}
+.thank-you-pop p{
+    font-size: 20px;
+    margin-bottom: 27px;
+    color:#5C5C5C;
+}
+.thank-you-pop h3.cupon-pop{
+    font-size: 25px;
+    margin-bottom: 40px;
+    color:#222;
+    display:inline-block;
+    text-align:center;
+    padding:10px 20px;
+    border:2px dashed #222;
+    clear:both;
+    font-weight:normal;
+}
+.thank-you-pop h3.cupon-pop span{
+    color:#03A9F4;
+}
+.thank-you-pop a{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 9px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #8BC34A;
+    border-radius: 17px;
+}
+.thank-you-pop a i{
+    margin-right:5px;
+    color:#fff;
+}
+#ignismyModal .modal-header{
+    border:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+<div class="jumbotron text-center">
+  <h1>MOVIETICKS</h1> 
+  <p>tickets on fingertips</p> 
+  <%
+
+   if(sess.user_id)
+   {
+    
+    if(sess.subscribe_status == "no")
+    {
+      %>
+    <form action="/subscribe" method="POST">
+    <div class="input-group">
+      <input type="email" class="form-control" name="subscribed_email" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+   </form>
+    <%
+    
+    }
+
+    else
+    {
+      %>
+      <form action="/unsubscribe" method="POST">
+    <div class="input-group">
+      <input type="email" class="form-control" name="subscribed_email" placeholder="Email Address" value="<%=sess.subscribed_email%>" disabled>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Unsubscribe</button>
+      </div>
+    </div>
+   </form>
+    <%
+    
+    }
+    
+   }
+  
+  else
+  {
+    %>
+
+ <div class="jumbotron">
+  <h1 class="display-4">Hello user!</h1>
+  <p class="lead">Please login to subscribe regarding future updates for this website. Thank You</p>
+  
+  
+</div>
+
+    <%
+  }
+
+
+
+
+  %>
+ 
+</div>
+</div>
+<!-- Container (About Section) -->
+<div class="a0">
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <br><br>
+      <h2>About us</h2><br>
+      <h4>Our team consists of a quartet of geeky engineers with adequate knowledge and experience in full stack development.</h4><br>
+      <p>- our objective goal is to enable seamless ticket bookings online. The Ticket Reservation System is a webportal
+        that can be accessed throughout the world by every person, every organization, and every community around the globe. This motivates us — inspires us — to do what we do. To make what we make. To invent, and to reinvent. To engineer experiences that amaze. We won’t stop pushing ahead, because you won’t stop pushing ahead. You’re reinventing how you work. How you play. How you live. With our site, you’ll reinvent how you go to movies.</p>
+      <br><button class="btn btn-primary btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-signal logo" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <i class="fa fa-globe logo" aria-hidden="true"></i>
+    </div>
+    <div class="col-sm-8">
+      <h2>AREAS WE OPERATE</h2><br>
+      <h4><strong>MISSION:</strong> we offer our services among all the metropolitan cities in india with vast range of theatres to choose from .</h4><br>
+      <p><strong>VISION:</strong> Our vision is to expand in various rural and urban areas throughout the country and implement our on demand system for all the communities that we classified from our database. we're also looking forward to expand our services to the capital cities of our neighbouring countries such as china,bangladesh,srilanka,mynmar and pakistan.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fa fa-power-off logo-small" aria-hidden="true"></i>
+      <h4>ULTRA FAST BOOKING</h4>
+      <p>seamless booking now also with reward  points included</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-heart logo-small" aria-hidden="true"></i>
+      <h4>COMMUNITY</h4>
+      <p>on demand select films for communities</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-lock logo-small" aria-hidden="true"></i>
+      <h4>SECURITY</h4>
+      <p>best in class security to protect your privacy</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fa fa-leaf logo-small" aria-hidden="true"></i>
+      <h4>GREEN</h4>
+      <p>we plant a tree for every 5 tickets that's sold</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-certificate logo-small" aria-hidden="true"></i>
+      <h4>CERTIFIED</h4>
+      <p>certified by leading theatre chains such as AMC,PVR,UV,UNIVERSAL.</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-wrench logo-small" aria-hidden="true"></i>
+      <h4 style="color:#303030;">CUSTOMER CARE</h4>
+      <p>your queires will be solved within 24hrs</p>
+    </div>
+  </div>
+</div>
+
+
+<div id="contact" class="container-fluid bg-grey">
+  <br>
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Jalandhar, punjab</p>
+      <p><span class="glyphicon glyphicon-phone"></span>+91 9915924543</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> mm98955@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+    	<%
+    	if(sess.user_id)
+    	{
+    		%>
+
+
+            <form action="/contact_us" method="POST">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="contact_name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="contact_email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="contact_comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-primary pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+
+    		<%
+    	}
+    	else
+    	{
+    		%>
+
+
+    		<div class="jumbotron">
+              <h1 class="display-4" style="color: black;">Hello user!</h1>
+              <p class="lead" style="color: black;">Please login regarding any issues with this website. Thank You</p>
+  
+  
+            </div>
+      
+    <%
+}
+    %>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <a class="btn btn-primary" id="btnTrigger" data-toggle="modal" href="#ignismyModal" style="display: none;">open Popup</a>
+        <div class="modal fade" id="ignismyModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                     </div>
+                    
+                    <div class="modal-body">
+                       
+                        <div class="thank-you-pop">
+                            <img src="Green-Round-Tick.png" alt="">
+                            <h1>Success!</h1>
+                            <p></p>
+                        </div>
+                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
